@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startmin - Bootstrap Admin Theme</title>
+    
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,8 +71,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
+                    
                     <li class="divider"></li>
                     <li><a href="Trangdangxuat.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
@@ -105,6 +104,8 @@
                                 <a href="nhomtin.php">Quản lý nhóm tin</a>
                             </li>
                             <li>
+                                <a href="trangdanhsachbinhluan.php">Quản lý bình luận</a>
+                            <li>
                                 <a href="#">Quản lý bài viết<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
@@ -124,7 +125,7 @@
         <div class="row">
                 <div class="col-lg-12">
 					<br><br>
-                    <h2> Chào mừng đến trang quản trị hệ thống</h2>
+                    <h2 style="color:red;"> Chào mừng Admin <?php echo $_SESSION['fullname'];?> đến trang quản trị hệ thống</h2>
 
     <!-- Page Content -->
    

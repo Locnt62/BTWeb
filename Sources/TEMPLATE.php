@@ -70,8 +70,6 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
                     <li class="divider"></li>
                     <li><a href="Trangdangxuat.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
@@ -103,6 +101,8 @@
                             <li>
                                 <a href="nhomtin.php">Quản lý nhóm tin</a>
                             </li>
+                            <li>
+                                <a href="trangdanhsachbinhluan.php">Quản lý bình luận</a>
                             <li>
                                 <a href="#">Quản lý bài viết<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">

@@ -94,10 +94,6 @@ img {
 }
  </style>
 </head>
-
-
-
-
 <div id="page-wrapper">
 <div class="container-fluid">
         <div class="row">
@@ -183,7 +179,7 @@ function showSlides(n) {
 }
 </script>
 <br>
-<div style="font-size:18px;">
+<div style="font-size:17px;">
 <p style=" font-weight:bolder;">English Club was founded in September 16, 2009 by enthusiastic students of Water Resources University. We are on the way that creates an academic environment effectively. Let’s remember that our club is your club, where you can:<br>
 
         <p>1. Practice your four English skills: Speaking, Listening, Reading and Writing<p>
@@ -199,3 +195,6 @@ function showSlides(n) {
         <p>4. English Listening: English songs and VOA NEWS are preferably used. You also have opportunities to chat with native people who are working in the Water Resources University.</p>
 
         Our target does not only stop in creating a place for English learner; we are trying to get achievements in other activities. Let’s join with us and write your own chapters of your life now. WRU English Club is a place where you can explore your interests in a way that reflects your values and goals.</p>
+       
+        <h4 style="color:red; text-align:center; font-size:20px;"> Contact us via Facebook :https://www.facebook.com/tluenglishclub/ | Email:tluenglishclub@gmail.com</h4>
+</div>

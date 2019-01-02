@@ -100,7 +100,7 @@
                         <ul class="nav nav-second-level">
                             <li>
                             <?php
-                                    $sql = "SELECT * FROM nhombai   ";
+                                    $sql = "SELECT * FROM nhombai where idnhom !='9'   ";
                                     $query = mysqli_query($conn,$sql);
                                     while ( $data = mysqli_fetch_array($query) ) {
                                         $id=$data['idnhom'];
@@ -111,10 +111,19 @@
                                 ?>
                             </li>
                             <li>
-                                <a href="#">Quản lý bài viết<span class="fa arrow"></span></a>
+                                <a href="#"> Các dạng đề thi Đề thi<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="trangdanhsachbaiviet.php">Danh sách bài viết</a>
+                                        <?php
+                                    $sql = "SELECT * FROM nhombai where idnhom ='9'   ";
+                                    $query = mysqli_query($conn,$sql);
+                                    while ( $data = mysqli_fetch_array($query) ) {
+                                        $id=$data['idnhom'];
+                                        $name=$data['tennhom'];
+                                        echo"<a href='news2.php?id=$id'>$name</a>";        
+                                    }
+                                
+                                ?>
                                     
                                     </li>
                                 </ul>
