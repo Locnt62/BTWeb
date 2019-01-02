@@ -54,6 +54,17 @@
             margin-top:0;
         }
 	}
+    tr{
+        text-align:center;
+        margin:4px 6px;
+    }
+    td a{
+        margin:4px 8px;
+    }
+    th{
+        text-align:center;
+    }
+   
 </style>
 <script src="ckeditor/ckeditor.js"></script>        
 </head>
@@ -65,11 +76,13 @@
         $idn=$_POST['idnhom'];
         $tieude=$_POST['title'];
         $anh=$_POST['anhtrichdan'];
+        $video=$_POST['videotrichdan'];
+        $ndtrichdan=$_POST['noidung'];
         $noidung=$_POST['post_content'];
         $user_id = $_SESSION["user_id"];
-        $sql="INSERT INTO posts ( idtin,title,content,user_id,createdate,updatedate,idnhom,anhtrichdan) VALUES('$idt','$tieude','$noidung','$user_id',now(),now(),'$idn','$anh')";
+        $sql="INSERT INTO posts ( idtin,title,content,user_id,createdate,updatedate,idnhom,anhtrichdan,videotrichdan,noidungtrichdan) VALUES('$idt','$tieude','$noidung','$user_id',now(),now(),'$idn','$anh','$video','$ndtrichdan')";
         $query=mysqli_query($conn,$sql);
-        header('location:trangdanhsachbaiviet.php');
+        
     }
 ?>
 <?php
@@ -100,10 +113,9 @@
 			<th bgcolor="#E6E6FA">STT</th>
 			<th bgcolor="#E6E6FA">ID tin</th>
             <th bgcolor="#E6E6FA">ID nhóm</th>
-            <th bgcolor="#E6E6FA"> Tiêu đề</th>
-            <th bgcolor="#E6E6FA"> Nội dung</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;"> Tiêu đề</th>  
             <th bgcolor="#E6E6FA">User id</th>
-            <th bgcolor="#E6E6FA">Xử lý</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;">Xử lý</th>
             
 
 			
@@ -121,7 +133,7 @@
             <td><?php echo $idt;?></td>
             <td><?php echo $idn;?></td>
             <td><?php echo $data['title'];?></td>
-            <td><?php echo substr($data['content'], 0, 300)." ...";?></td>
+            
             <td><?php echo $data['user_id'];?></td>
             <td>
                 <a href="suabaiviet.php?idt=<?php echo $idt;?>" style="text-decoration:none;">Sửa</a>
@@ -145,7 +157,8 @@
                         <div class="col-2">
                             <input type="text"  name="idnhom" >
                         </div>
-                    
+            </div>
+            <div class="row">
                         <div class="col-1">
                             <label for="title">Tiêu đề bài viết</label>
                         </div>
@@ -156,7 +169,7 @@
     
                     <div class="row">
                         <div class="col-1">
-                            <label for="anhtrichdan">Trích dẫn ảnh</label>
+                            <label for="anhtrichdan">Trích dẫn audio</label>
                         </div>
                         <div class="col-2">
                             <input type="text"  name="anhtrichdan" >
@@ -164,10 +177,26 @@
                     </div>
                     <div class="row">
                         <div class="col-1">
+                            <label for="videotrichdan">Trích dẫn video</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" name="videotrichdan">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label for="noidngtrichdan">Nội dung trích dẫn</label>
+                        </div>
+                        <div class="col-2">
+                            <textarea name="noidung" id="noidung"  height='60px';></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
                             <label for="content"> Nội dung bài viết</label>
                         </div>
                         <div class="col-2">
-                            <textarea name="post_content" id="post_content" ></textarea>
+                            <textarea name="post_content" id="post_content"  ></textarea>
                         </div>
                     </div>
                     
@@ -179,13 +208,21 @@
             </form>
 
         </div>
+        <br>
            
             <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'post_content' );
             </script>
+            
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'noidung' );
+            </script>
     </div>
 </div>
     </div>
     </div>
+    <br>
