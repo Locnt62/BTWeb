@@ -3,50 +3,61 @@
     <head>
     <link rel="stylesheet" type="text/css" href="filenhung.css" medial="all" />
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+           <?php require_once("connection.php");?>
             <?php session_start();?>
+            
            
-        <?php
+            <?php
        
-        //Gọi file connection.php ở bài trước
-        require_once("connection.php");
-            // Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
-        if (isset($_POST["btn_login"])) {
-            // lấy thông tin người dùng
-            $username = $_POST["username"];
-            $password = $_POST["password"];
-            //làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt 
-            //mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
-            $username = strip_tags($username);
-            $username = addslashes($username);
-            $password = strip_tags($password);
-            $password = addslashes($password);
-            if ($username == "" || $password =="") {
-                echo "username hoặc password bạn không được để trống!";
-            }else{
-                $sql = "select * from users where username = '$username' and password = '$password' ";
-                $query = mysqli_query($conn,$sql);
-                $num_rows = mysqli_num_rows($query);
-                if ($num_rows==0) {
-                    echo "tên đăng nhập hoặc mật khẩu không đúng !";
-                }else{
-                    // Lấy ra thông tin người dùng và lưu vào session
-                    while ( $data = mysqli_fetch_array($query) ) {
-                        $_SESSION["user_id"] = $data["id"];
-                        $_SESSION['username'] = $data["username"];
-                        $_SESSION["email"] = $data["email"];
-                        $_SESSION["fullname"] = $data["fullname"];
-                        $_SESSION["is_block"] = $data["is_block"];
-                        $_SESSION["permision"] = $data["permision"];
-                    }
-                    
-                        // Thực thi hành động sau khi lưu thông tin vào session
-                        // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                    header('Location: Home2.php');
+        
+        
+       // Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
+    if (isset($_POST["btn_login"])){
+       // lấy thông tin người dùng
+       $username = $_POST["username"];
+       $password = $_POST["password"];
+       //làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt 
+       //mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
+       $username = strip_tags($username);
+       $username = addslashes($username);
+       $password = strip_tags($password);
+       $password = addslashes($password);
+       if ($username == "" || $password =="") {
+           echo "username hoặc password bạn không được để trống!";
+       }else{
+           $sql = "select * from users where username = '$username' and password = '$password' ";
+           $query = mysqli_query($conn,$sql);
+           $num_rows = mysqli_num_rows($query);
+           if ($num_rows==0) {
+               echo "tên đăng nhập hoặc mật khẩu không đúng !";
+           }else{
+               // Lấy ra thông tin người dùng và lưu vào session
+               while ( $data = mysqli_fetch_array($query) ) {
+                   $_SESSION["user_id"] = $data["id"];
+                   $_SESSION['username'] = $data["username"];
+                   $_SESSION["email"] = $data["email"];
+                   $_SESSION["fullname"] = $data["fullname"];
+                   $_SESSION["is_block"] = $data["is_block"];
+                   $_SESSION["permision"] = $data["permision"];
+            
+               if (isset($_SESSION['permision']) == true) {
+                $permission = $_SESSION['permision'];
+                // Kiểm tra quyền của người đó có phải là admin hay không
+                    if ($permission == '1') {
+                        header('Location:adminchuan.php');
+                    }else{
+                   // Thực thi hành động sau khi lưu thông tin vào session
+                   // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
+                   header('Location: Home2.php');
+                        }
+                }
                 }
             }
         }
-        ?>
-        <?php
+}
+   ?>
+   <?php
+
         if(isset($_POST['btn_Signup'])){
             $username=$_POST["username"];
             $password=$_POST['pass'];
@@ -55,12 +66,12 @@
             if($username== "" || $password== "" || $name== "" || $email== ""){            
                 echo "<strong >Vui lòng nhập đủ các thông tin trên !</strong>";
             }else{
-                $sql = "INSERT INTO users(username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
+                $sql = "INSERT INTO users (username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
                 mysqli_query($conn,$sql);
                 echo" Chúc mừng bạn đã đăng ký thành công !";
             }
         }
-        mysqli_close($conn);
+        
     ?>
         
     
@@ -68,19 +79,13 @@
 <body>
 <div id="header">
       </div>        
+      
         <ul>
             <li><a href="Home1.php">Home</a></li>
-            <li><a href="#news">Các khóa học</a></li>
+            <li><a href="dangky1.php">Đăng ký</a></li>
+            
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Bài tập</a>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-            </li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Thi Thử</a>
+                <a href="javascript:void(0)" class="dropbtn">Thư viện ảnh</a>
                     <div class="dropdown-content">
                         <a href="#">Link 1 </a>
                         <a href="#">Link 2</a>
@@ -92,6 +97,8 @@
                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login-container button">Login</button> 
                 </div>
         </ul>
+    
+
 
 
     
@@ -144,7 +151,7 @@ window.onclick = function(event) {
   <form class="modal-content1 animate" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
     <div class="container">
       <h2>Sign Up</h2>
-      <p>Please fill in this form to create an account.</p>
+      <p style="font-weight:bolder;">Please fill in this form to create an account.</p>
       <hr>
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>
@@ -163,7 +170,7 @@ window.onclick = function(event) {
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="button" class="signupbtn" name="btn_Signup">Sign Up</button>
+        <button type="button" class="signupbtn" name=" btn_Signup">Sign Up</button>
       </div>
     </div>
   </form>

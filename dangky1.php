@@ -2,24 +2,28 @@
 <html lang="vi-VN">
 
             
-    <?php require_once("connection.php");?>
-    <?php include("Home.php");?>
-    <?php
-        if(isset($_POST['btn_submit'])){
-            $username=$_POST["username"];
-            $password=$_POST['pass'];
-            $name=$_POST['name'];
-            $email=$_POST['email'];
-            if($username== "" || $password== "" || $name== "" || $email== ""){            
-                echo "<strong >Vui lòng nhập đủ các thông tin trên !</strong>";
-            }else{
-                $sql = "INSERT INTO users(username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
-                mysqli_query($conn,$sql);
-                echo" Chúc mừng bạn đã đăng ký thành công !";
-            }
-        }
-        mysqli_close($conn);
-    ?>
+
+<?php require_once("connection.php"); ?>
+<?php include("Home1chuan.php");?>
+<?php
+	if (isset($_POST["btn_submit"])) {
+		//lấy thông tin từ các form bằng phương thức POST
+		$username = $_POST["username"];
+		$password = $_POST["pass"];
+		$name = $_POST["name"];
+		$email = $_POST["email"];
+		//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
+		if ($username == "" || $password == "" || $name == "" || $email == "") {
+			echo "bạn vui lòng nhập đầy đủ thông tin";
+		}else{
+			$sql = "INSERT INTO users(username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
+			// thực thi câu $sql với biến conn lấy từ file connection.php
+			mysqli_query($conn,$sql);
+			echo "chúc mừng bạn đã đăng ký thành công";
+		}
+	}
+ 
+?>
     <head>
     
     

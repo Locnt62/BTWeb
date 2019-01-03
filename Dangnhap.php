@@ -110,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!--header end here-->
 <div class="copyright">
-	<p>© 2018  All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  WEC </a></p>
+	<p>© 2018  All rights reserved | Designed by WEC </a></p>
 </div>
 <!--footer end here-->
 </body>

@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-
-            
-    <?php require_once("connection.php");?>
-    <?php include("Homelogout.php");?>
-    <?php
-        if(isset($_POST['btn_submit'])){
-            $username=$_POST["username"];
-            $password=$_POST['pass'];
-            $name=$_POST['name'];
-            $email=$_POST['email'];
-            if($username== "" || $password== "" || $name== "" || $email== ""){            
-                echo "<strong >Vui lòng nhập đủ các thông tin trên !</strong>";
-            }else{
-                $sql = "INSERT INTO users(username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
-                mysqli_query($conn,$sql);
-                echo" Chúc mừng bạn đã đăng ký thành công !";
-            }
-        }
-        mysqli_close($conn);
-    ?>
     <head>
     
-    
-        <style>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            
+           
+       
+     <style>
+     
             
             *{
                 box-sizing: border-box;
@@ -49,7 +33,7 @@
             }
             .containt{
                 background-color:#ccccb3;
-                padding:12px 16px 10px 12px;
+                padding:18px 22px;
                 border-radius: 5px;
                 width:600px;
                 
@@ -75,13 +59,40 @@
                     margin-top:0;
                 }
             }
-        </style>
+        </style>   
+    
     </head>
+<body>
 
-    <body>
-            <div id="noidung">
-            <div id="noidunga">
-                <p style="font-weight:bolder;">Đăng ký thành viên tại đây </p>
+<div id="page-wrapper">
+<div class="container-fluid">
+        <div class="row">
+                <div class="col-lg-12">
+					<br><br>
+                    <?php
+       
+       //Gọi file connection.php ở bài trước
+       require_once("connection.php");
+       include("TEMPLATE(CLIENT).php");
+       ?>
+       <?php
+       
+       if(isset($_POST['btn_Signup'])){
+           $username=$_POST["username"];
+           $password=$_POST['pass'];
+           $name=$_POST['name'];
+           $email=$_POST['email'];
+           if($username== "" || $password== "" || $name== "" || $email== ""){            
+               echo "<strong >Vui lòng nhập đủ các thông tin trên !</strong>";
+           }else{
+               $sql = "INSERT INTO users(username, password, fullname, email, createdate ) VALUES ( '$username', '$password', '$name', '$email', now())";
+               mysqli_query($conn,$sql);
+               echo" <h3>Chúc mừng bạn đã đăng ký thành công !</h3>";
+           }
+       }
+       mysqli_close($conn);
+   ?>
+                <h2 style="font-weight:bolder;">Đăng ký thành viên tại đây </h2>
             
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
                 <div class="containt">
@@ -118,13 +129,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <input type="submit" value="submit" name="btn_submit">
+                        <input type="submit" value="submit" name="btn_Signup">
                 </div>
                 </form>
         </div>
         </div>
-        
-        
-        </body>  
-        </html> 
-     
