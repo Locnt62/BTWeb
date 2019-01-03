@@ -91,7 +91,7 @@
 			<td><?php echo $dt['email'];?></td>
 			<td><?php echo $dt['password'];?></td>
 			<td><?php echo $dt['fullname'];?></td>
-			<td><a href="upload.php?id_delete=<?php echo $id;?>"style="text-decoration:none;">Xóa</a>
+			<td><a href="upload.php?id_delete=<?php echo $id;?>"style="text-decoration:none;">Xóa ảnh đại diện</a></td>
 		</tr>
 	</thead>
 	</table>
@@ -116,7 +116,7 @@
 			?>
 	<?php
 		}
-		}
+		
 	?>
 	<?php
 		if (isset($_GET["id_delete"])) {
@@ -127,10 +127,11 @@
 				if(unlink($r['type_anh'])){
 					$sql5="DELETE from avar where id_use=".$_GET["id_delete"];
 					$query5=mysqli_query($conn,$sql5);
-					
+				
 				}
 			}
 		}
+	}
 	?>
 </body>
 </html>
