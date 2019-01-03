@@ -156,7 +156,9 @@
                     <input type="text" name="name" require>
             </div>
             <div class="row">
+            
                 <input type="submit" value="submit" name="btn_them">
+           
             </div>
 
 </div>

@@ -65,8 +65,9 @@
 								echo isset($_SESSION["username"]) ? $_SESSION["fullname"] : "";
 							?><b class="caret"></b>
                 </a>
+               
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    <li><a href="upload.php?id=<?php echo $_SESSION['user_id']?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
                     </li>
                     <li><a href="Home3.php"><i class="fa fa-gear fa-fw"></i> Admin</a>
                     </li>
@@ -74,6 +75,8 @@
                     <li><a href="Trangdangxuat.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
+               
+                
             </li>
         </ul>
 

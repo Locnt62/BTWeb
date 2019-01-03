@@ -70,11 +70,12 @@
     $anh=$_POST['anhtrichdan'];
     $noidung=$_POST['post_content'];
     $idt=$_POST['idtin'];
-    
+    $ndtrichdan=$_POST['noidung'];
+    $video=$_POST['videotrichdan'];
 
 
 // Viết câu lệnh cập nhật thông tin người dùng
-$sql = "UPDATE posts SET idnhom='$idn',title='$tieude',anhtrichdan='$anh',content='$noidung' where idtin='$idt'";
+$sql = "UPDATE posts SET idnhom='$idn',title='$tieude',anhtrichdan='$anh',content='$noidung', noidungtrichdan='$ndtrichdan',videotrichdan='$video' where idtin='$idt'";
 // thực thi câu $sql với biến conn lấy từ file connection.php
 mysqli_query($conn,$sql);
 header('Location: trangdanhsachbaiviet.php');
@@ -130,6 +131,22 @@ header('Location: trangdanhsachbaiviet.php');
                     </div>
                     <div class="row">
                         <div class="col-1">
+                            <label for="videotrichdan">Trích dẫn video</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" name="videotrichdan">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label for="noidngtrichdan">Nội dung trích dẫn</label>
+                        </div>
+                        <div class="col-2">
+                            <textarea name="noidung" id="noidung"  height='60px';></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
                             <label for="content"> Nội dung bài viết</label>
                         </div>
                         <div class="col-2">
@@ -147,6 +164,11 @@ header('Location: trangdanhsachbaiviet.php');
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'post_content' );
+            </script>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'noidung' );
             </script>
             <?php }
     }
