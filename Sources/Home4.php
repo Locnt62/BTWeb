@@ -98,29 +98,28 @@ img {
 <div class="container-fluid">
         <div class="row">
                 <div class="col-lg-12">
-					<br>
-             <h2 style="text-align:center; color:red;"> Welcome to WRU English club</h2>       
+                <br>
+         
+                
+			     
              <br>
              <div class="container">
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="chuan1.jpg" style="width:100%">
+    <div class="numbertext">1 / 3</div>
+    <img src="ban1.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="chuan2.jpg" style="width:100%">
+    <div class="numbertext">2 / 3</div>
+    <img src="ban2.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="chuan3.jpg" style="width:100%">
+    <div class="numbertext">3 / 3</div>
+    <img src="ban3.jpg" style="width:100%">
   </div>
     
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="chuan4.jpg" style="width:100%">
-  </div>
+  
 
   
     
@@ -133,17 +132,15 @@ img {
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="chuan1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Lớp học của clb tại cơ sở Hưng Yên">
+      <img class="demo cursor" src="ban1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tết Samsung trúng 99 lượng vàng">
     </div>
     <div class="column">
-      <img class="demo cursor" src="chuan2.jpg" style="width:100%" onclick="currentSlide(2)" alt="WEC Family">
+      <img class="demo cursor" src="ban2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tết sắm Oppo lì xì đến 1 triệu">
     </div>
     <div class="column">
-      <img class="demo cursor" src="chuan3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cuộc thi nói tiếng Anh không chuyên">
+      <img class="demo cursor" src="ban3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Xem phim gần chết không hết data">
     </div>
-    <div class="column">
-      <img class="demo cursor" src="chuan4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cuộc thi nói tiếng Anh không chuyên">
-    </div>
+   
     
   </div>
 </div>
@@ -180,21 +177,14 @@ function showSlides(n) {
 </script>
 <br>
 <div style="font-size:17px;">
-<p style=" font-weight:bolder;">English Club was founded in September 16, 2009 by enthusiastic students of Water Resources University. We are on the way that creates an academic environment effectively. Let’s remember that our club is your club, where you can:<br>
+<p style=" font-weight:bolder;">Công ty TNHH Đầu tư Phát triển Sản xuất Nông nghiệp VinEco - một thành viên của Tập Đoàn Vingroup - đã chính thức tham gia vào lĩnh vực nông nghiệp ngày 19 tháng 3 năm 2015.
+Với mục tiêu đưa thương hiệu nông sản Việt Nam lên đấu trường quốc tế, VinEco còn tích cực tham gia các hội chợ quốc tế: Thaifex (hội chợ quốc tế về thực phẩm và đồ uống hàng đầu châu Á); tuần hàng Việt Nam tại Rungis Pháp (chợ đầu mối lớn nhất thế giới về nông sản); Gulfood 2017, 2018 (hội chợ thường niên lớn nhất thế giới về nông sản, thực phẩm và đồ uống tại Dubai)… và đã gây ấn tượng mạnh mẽ với bạn bè quốc tế khi là doanh nghiệp trẻ nhưng có quy mô và đầu tư bài bản cùng hệ thống nông sản đặc trưng hoàn toàn “made in Vietnam”.
 
-        <p>1. Practice your four English skills: Speaking, Listening, Reading and Writing<p>
-        <p>2. Learn and share experiences</P>
-        <p>3. Play English games and do English quizzes freely</P>
-        <p>4. Get opportunities to study English from other organizations freely</p>
-        <p>5. Make presentations and become a confident person</p>
-
-        <p style="font-weight:bolder;">Our strategy is to divide English into various sections that make you feel easy in all activities:</p>
-        <p>1. English vocabulary: In the first week of every month, we have a hot topic for discussion. Members have to prepare new words and ideas for their presentation. It’s the best way for learning vocabulary. Besides, we strongly recommend members have their own hand book to save new words during other activities.</P>
-        <p>2. English pronunciation: Make presentations and discuss topics are our ways for solving this problem. We will care about aspects such as word stress, sentences stress and linking.</P>
-        <p>3. English Grammar: Self study plays an important role in this section. All the obstacles will be explained if members cannot understand by themselves.</p>
-        <p>4. English Listening: English songs and VOA NEWS are preferably used. You also have opportunities to chat with native people who are working in the Water Resources University.</p>
-
-        Our target does not only stop in creating a place for English learner; we are trying to get achievements in other activities. Let’s join with us and write your own chapters of your life now. WRU English Club is a place where you can explore your interests in a way that reflects your values and goals.</p>
+Với người tiêu dùng, thương hiệu VinEco trở thành nguồn cung cấp nông sản uy tín, đảm bảo nguồn thực phẩm sạch, an toàn cho sức khỏe cộng đồng. Với các hộ sản xuất và các doanh nghiệp hoạt động trong lĩnh vực nông nghiệp, VinEco trở thành cầu nối thị trường và đơn vị tiên phong nông sản sạch, góp phần thúc đẩy sự phát triển của toàn ngành nông nghiệp Việt Nam.</p>
        
-        <h4 style="color:red; text-align:center; font-size:20px;"> Contact us via Facebook :https://www.facebook.com/tluenglishclub/ | Email:tluenglishclub@gmail.com</h4>
+        <h4 style="color:red; text-align:center; font-size:20px;">Thông tin liên hệ</h4>
+        <p>Văn phòng điều hành:
+Công ty TNHH Một Thành Viên Công Nghệ Thông Tin Thế Giới Di Động Lô T2-1.2 đường D1, Khu Công Nghệ Cao, Phường Tân Phú, Quận 9, TP.HCM
+Số điện thoại: 028 38125960
+E-mail: investor@thegioididong.com</p>
 </div>

@@ -34,7 +34,7 @@
 
     // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE
     $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-    $limit = 10;
+    $limit = 5;
 
     // BƯỚC 4: TÍNH TOÁN TOTAL_PAGE VÀ START
     // tổng số trang
@@ -53,11 +53,6 @@
     //TRuy vấn và hiển thị nội dung của trang
     $sql="SELECT * FROM posts WHERE idnhom='$id' order by idtin  limit $start ,$limit";
     $query=mysqli_query($conn,$sql);
-    ?>
-    <table width="100%">
-        <tr>
-    <?php
-    $i=0;
     while($data=mysqli_fetch_array($query)){
         $idtin=$data['idtin'];
         $tieude=$data['title'];
@@ -65,23 +60,16 @@
         $idnhom=$data['idnhom'];
         $anhtrichdan=$data['anhtrichdan'];
         $noidungtrichdan=$data['noidungtrichdan'];
-        if($i == 4){
-            echo "</tr>";
-            $i=0;
+        echo"<a href='chitiet.php?idn=$idnhom& id=$idtin' style='text-decoration:none; font-size:26px; font-weight:bolder;'>$tieude</a><br>";
+        echo "<br>";
+        echo "<table width='100%'>";
+        echo "<tr>";
+        if ($anhtrichdan !=null){
+            echo "<td width='100'><img src='$anhtrichdan' width='200' height='100'></td>";
         }
-    ?>
-    <td>
-    <?php    
-    echo"<a href='chitiet.php?idn=$idnhom& id=$idtin' style='text-decoration:none; font-size:26px; font-weight:bolder;'>$tieude</a><br>";
-    ?>
-        <br>
-   
-       
-     <img src='<?php echo $anhtrichdan;?>' width='200' height='100'><br>
-     <p><?php echo $noidungtrichdan;?></p>
-     </td>
-     <?php
-     $i++;
+        echo "<td>$noidungtrichdan</td>";
+        echo "</tr>";
+        echo "</table>";
         }
     
 

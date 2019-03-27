@@ -104,10 +104,10 @@
 <table border="1px;" align="center">
 	<thead>
 		<tr>
-			<th bgcolor="#E6E6FA">STT</th>
-			<th bgcolor="#E6E6FA">ID nhóm</th>
-            <th bgcolor="#E6E6FA"> Tên nhóm</th>
-            <th bgcolor="#E6E6FA"> Xử lý</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">STT</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">ID nhóm</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;"> Tên nhóm</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;"> Xử lý</th>
 			
 		<tr>
 	</thead>
@@ -165,3 +165,5 @@
     </div>
     </div>
     </div>
+    
+    

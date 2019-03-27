@@ -98,14 +98,28 @@
                         <a href="trangthongtinthanhvien.php" class="active"><i class="fa fa-dashboard fa-fw"></i>Quản lý thành viên</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Bài viết <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Các chức năng quản lý <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="nhomtin.php">Quản lý nhóm tin</a>
                             </li>
                             <li>
-                                <a href="trangdanhsachbinhluan.php">Quản lý bình luận</a>
+                                <a href="khachhang.php">Quản lý khách hàng</a>
+                            </li>    
                             <li>
+                                <a href="trangdanhsachbinhluan.php">Quản lý bình luận</a>
+                            </li>
+                            <li>
+                                <a href="trangdanhsachsanpham.php">Quản lý sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="trangdanhsachnhacungcap.php">Quản lý nhà cung cấp</a>
+                            </li>
+                            <li>
+                                <a href="hoadon.php">Quản lý hóa đơn</a>
+                            </li>    
+                            <li>
+                            
                                 <a href="#">Quản lý bài viết<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>

@@ -1,5 +1,5 @@
 <?php require_once("connection.php");?>
- <?php   include("TEMPLATE(CLIENT).php");?>
+ <?php   include("Template_index.php");?>
  <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <style>
@@ -34,7 +34,7 @@
 
     // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE
     $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-    $limit = 10;
+    $limit = 5;
 
     // BƯỚC 4: TÍNH TOÁN TOTAL_PAGE VÀ START
     // tổng số trang
@@ -55,9 +55,10 @@
     $query=mysqli_query($conn,$sql);
     ?>
     <table width="100%">
-        <tr>
-    <?php
-    $i=0;
+            <tr>
+        <?php
+        $i=0;
+
     while($data=mysqli_fetch_array($query)){
         $idtin=$data['idtin'];
         $tieude=$data['title'];
@@ -72,7 +73,7 @@
     ?>
     <td>
     <?php    
-    echo"<a href='chitiet.php?idn=$idnhom& id=$idtin' style='text-decoration:none; font-size:26px; font-weight:bolder;'>$tieude</a><br>";
+    echo"<a href='chitiet1.php?idn=$idnhom& id=$idtin' style='text-decoration:none; font-size:26px; font-weight:bolder;'>$tieude</a><br>";
     ?>
         <br>
    
@@ -93,7 +94,7 @@
  
             // nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
             if ($current_page > 1 && $total_page > 1){
-                echo '<a href="news2.php?page='.($current_page-1).' & id='.$id.'">Prev</a> | ';
+                echo '<a href="news3.php?page='.($current_page-1).' & id='.$id.'">Prev</a> | ';
             }
  
             // Lặp khoảng giữa
@@ -104,13 +105,13 @@
                     echo '<span>'.$i.'</span> | ';
                 }
                 else{
-                    echo '<a href="news2.php?page='.$i.'& id='.$id.'">'.$i.'</a> | ';
+                    echo '<a href="news3.php?page='.$i.'& id='.$id.'">'.$i.'</a> | ';
                 }
             }
  
             // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
             if ($current_page < $total_page && $total_page > 1){
-                echo '<a href="news2.php?page='.($current_page+1).'& id='.$id.'">Next</a> | ';
+                echo '<a href="news3.php?page='.($current_page+1).'& id='.$id.'">Next</a> | ';
             }
            ?>
         </div>

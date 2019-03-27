@@ -59,8 +59,7 @@
     
     </head>
 <body>
-    <div id="header">
-    </div>
+    
     
         <ul>
             <li><a href="dangnhap.php">Home</a></li>
