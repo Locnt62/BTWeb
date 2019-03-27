@@ -1,5 +1,5 @@
 <?php require_once("connection.php");?>
- <?php   include("TEMPLATE(CLIENT).php");?>
+ <?php   include("Template_index.php");?>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php session_start();?>
@@ -115,9 +115,9 @@
                 
                 
             ?>
-            <p style="text-decoration:underline;font-style:italic;font-size:30px;text-align:center;"><?php echo $r['title'];?></p>
+            <p style="font-style:italic;font-size:40px;text-align:center;"><?php echo $r['title'];?></p>
             <small> Ngày tạo &nbsp<?php echo $r['createdate'];?></small><br>
-           <table width="100%">
+            <table width="100%">
                 <tr>
                     <td><img src="<?php echo $anh;?>" width="400dp" height="500dp"></td> 
            
@@ -139,68 +139,10 @@
             <?php
             }
         }
-        ?>
-        <br>
-        <h2> Comment</h2>
-        <div class="containt">
-        <form action="chitiet.php?idn=<?php echo $idn ?>&%20id=<?php echo $id?>" method="POST">
-        
-                    
-                <div class="row">
-                    <div class="col-1">
-                        <label for="anhtrichdan">Name</label>
-                    </div>
-                    <div class="col-2">
-                        <input type="text"  name="ten" value="<?php echo $_SESSION['fullname'];?>" >
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <label for="content"> Nội dung </label>
-                    </div>
-                    <div class="col-2">
-                        <textarea name="post_content" id="post_content"  style="min-height:100px;"></textarea>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <input type="submit" value="submit" name="btn_binhluan">
-                </div>
-            </div>
-        
-        </form>
-        </div>
-        <br>
-        
-          
-        
-        
-        <fieldset style="width:550px; margin-left:5px;padding:0 0 8px 2px">
-        <legend> Old comment</legend>
-        <ul>
-        <?php
-            $sql="SELECT * from comment where cm_check='Y' and idtin ='$id'";
-            $result=mysqli_query($conn,$sql);
-            while($data1=mysqli_fetch_array($result)){
-            $cm_id=$data1['cm_id'];
-        ?>
-        <li>
-                        <img src="avar.png" width="52px">
-                        <div class="anh">
-                            <h4><?php echo $data1['ten'];?></h4>
-                            <small><p><?php echo $data1['creatdate'];?></p></small>
-                            <h5><?php echo $data1['noidung'];?></h5>
-                        </div>   
-        <?php
-                }  
-            
-        ?>
-        
-        <?php
         }
         ?>
-        </ul>
-        </fieldset>
+        <br>
+        
           
     </div>
 </body>

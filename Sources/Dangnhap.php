@@ -74,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--header start here-->
 <div class="header">
 		<div class="header-main">
-               <h1>Welcome to WRU ENGLISH CLUB</h1><br>
+               <h1>Welcome to Administration Program</h1><br>
                <h2> Login for more information</h2><br>
 			<div class="header-bottom">
 				<div class="header-right w3agile">
