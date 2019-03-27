@@ -100,9 +100,6 @@
 ?>
 <div id="page-wrapper">
         <div class="container-fluid">
-
-      
-
             <div class="row">
                 <div class="col-lg-12">
                     <br><br>
@@ -110,11 +107,11 @@
     <table border="1px;" align="center">
 	<thead>
 		<tr>
-			<th bgcolor="#E6E6FA">STT</th>
-			<th bgcolor="#E6E6FA">ID tin</th>
-            <th bgcolor="#E6E6FA">ID nhóm</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">STT</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">ID tin</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;">ID nhóm</th>
             <th bgcolor="#E6E6FA" style="text-align:center;"> Tiêu đề</th>  
-            <th bgcolor="#E6E6FA">User id</th>
+            <th bgcolor="#E6E6FA" style="text-align:center;">User id</th>
             <th bgcolor="#E6E6FA" style="text-align:center;">Xử lý</th>
             
 
@@ -169,7 +166,7 @@
     
                     <div class="row">
                         <div class="col-1">
-                            <label for="anhtrichdan">Trích dẫn audio</label>
+                            <label for="anhtrichdan">Trích dẫn ảnh</label>
                         </div>
                         <div class="col-2">
                             <input type="text"  name="anhtrichdan" >

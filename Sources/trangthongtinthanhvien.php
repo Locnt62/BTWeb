@@ -33,13 +33,13 @@
 <table border="1px;" align="center">
 	<thead>
 		<tr>
-			<th bgcolor="#E6E6FA">STT</th>
-			<th bgcolor="#E6E6FA">ID</th>
-			<th bgcolor="#E6E6FA">Username</th>
-			<th bgcolor="#E6E6FA">Email</th>
-			<th bgcolor="#E6E6FA">Khóa tài khoản</th>
-			<th bgcolor="#E6E6FA">Quyền</th>
-			<th bgcolor="#E6E6FA">Hành động</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">STT</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">ID</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">Username</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">Email</th>
+			<th bgcolor="#E6E6FA"style="text-align:center;">Khóa tài khoản</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">Quyền</th>
+			<th bgcolor="#E6E6FA" style="text-align:center;">Hành động</th>
 		<tr>
 	</thead>
 	<tbody>

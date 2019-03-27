@@ -102,7 +102,20 @@
                                 <a href="nhomtin.php">Quản lý nhóm tin</a>
                             </li>
                             <li>
+                                <a href="khachhang.php">quản lý khách hàng</a>
+                            </li>
+                            <li>
                                 <a href="trangdanhsachbinhluan.php">Quản lý bình luận</a>
+                            </li>
+                            <li>
+                                <a href="trangdanhsachsanpham.php">Quản lý sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="trangdanhsachnhacungcap.php">Quản lý nhà cung cấp</a>
+                            </li>
+                            <li>
+                                <a href="hoadon.php">Quản lý hóa đơn</a>
+                            </li> 
                             <li>
                                 <a href="#">Quản lý bài viết<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">

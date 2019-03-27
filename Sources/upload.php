@@ -91,7 +91,7 @@
 			<td><?php echo $dt['email'];?></td>
 			<td><?php echo $dt['password'];?></td>
 			<td><?php echo $dt['fullname'];?></td>
-			<td><a href="upload.php?id_delete=<?php echo $id;?>"style="text-decoration:none;">Xóa ảnh đại diện</a></td>
+			<td><a href="upload.php?id_delete=<?php echo $id;?>" style="text-decoration:none;">Xóa ảnh đại diện</a></td>
 		</tr>
 	</thead>
 	</table>
@@ -106,8 +106,8 @@
 			?>
 		<?php if($rs['type_anh'] !=null){?>
 		
-		<img src="<?php echo $anh;?>" width="200px" height="250px">
-			
+		<img src="<?php echo $anh;?>" width="300px" height="300px" style="margin-left:400px;">
+		<br>
 			<?php
 				}else{
 					echo"<img src='avar.png' width='200px' height='250px'>";
@@ -116,6 +116,7 @@
 			?>
 	<?php
 		}
+	}
 		
 	?>
 	<?php
@@ -131,7 +132,7 @@
 				}
 			}
 		}
-	}
+	
 	?>
 </body>
 </html>

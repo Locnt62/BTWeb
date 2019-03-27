@@ -140,7 +140,7 @@
 						</div>
 						<div class="col-2">
 							<select id="permission" name="permission">
-							<option value="0">Thành viên thường</option>
+							<option value="0">Nhân viên</option>
 							<option value="1">Admin </option>	
 							</select>
 						</div>

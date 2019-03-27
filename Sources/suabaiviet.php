@@ -97,9 +97,6 @@ mysqli_query($conn,$sql);
 <body>
 <div id="page-wrapper">
         <div class="container-fluid">
-
-      
-
             <div class="row">
                 <div class="col-lg-12">
             <h2>Sửa nội dung của bài viết:&nbsp<?php echo $data['title'];?></h2>

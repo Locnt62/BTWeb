@@ -100,8 +100,8 @@
 		
 		$select = '<select id="permission" name="permission">
 						<option value="-1"></option>
-						<option value="0" '.$select_1.'>Thành viên thường</option>
-						<option value="1" '.$select_2.'>Admin cấp 1</option>
+						<option value="0" '.$select_1.'>Nhân viên</option>
+						<option value="1" '.$select_2.'>Admin </option>
 						
 					</select>';
  
@@ -153,7 +153,7 @@
 							<label for="permission">Quyền</label>
 						</div>
 						<div class="col-2">
-                            <?php echo make_permission_dropdown($data['permision']); ?>
+                           <?php echo make_permission_dropdown($data['permision']); ?> 
 						</div>
 					</div>
 					<div class="row">
